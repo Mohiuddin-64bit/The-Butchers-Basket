@@ -51,7 +51,7 @@ const list = [
 
 const FlashSale = () => {
   return (
-    <section className="container">
+    <section className="container mt-24 md:mt-12 lg:mt-0">
       <div className="flex justify-between items-center mb-12">
         <h3 className="text-3xl font-bold">Flash Sale</h3>
         <Button>View All</Button>
