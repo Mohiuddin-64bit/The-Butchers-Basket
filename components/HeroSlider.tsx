@@ -4,6 +4,8 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoMdAddCircleOutline } from "react-icons/io";
+import { title, subtitle } from "@/components/primitives";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,25 +18,25 @@ import { Image } from "@nextui-org/image";
 
 const images = [
   {
-    url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
+    url: "https://images.unsplash.com/photo-1538159021332-8f28e9eca2fb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHZlZ2l0YWJsZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
+    url: "https://images.unsplash.com/photo-1510627498534-cf7e9002facc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHZlZ2l0YWJsZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
+    url: "https://images.unsplash.com/photo-1572357176061-7c96fd2af22f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHZlZ2l0YWJsZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
+    url: "https://images.unsplash.com/photo-1579113800032-c38bd7635818?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fHZlZ2l0YWJsZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
+    url: "https://images.unsplash.com/photo-1553536645-f83758b55d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fHZlZ2l0YWJsZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
+    url: "https://images.unsplash.com/photo-1633908481624-0855811183a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHZlZ2l0YWJsZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
+    url: "https://images.unsplash.com/photo-1649752876592-abf97e813023?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHZlZ2l0YWJsZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
     url: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?cs=srgb&dl=pexels-julia-nagy-568948-1327838.jpg&fm=jpg",
@@ -43,7 +45,20 @@ const images = [
 
 const HeroSlider = () => {
   return (
-    <>
+    <section className="h-screen">
+      <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+        <div className="inline-block text-center justify-center">
+          <h1 className={title()}>Make&nbsp;</h1>
+          <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+          <br />
+          <h1 className={title()}>
+            websites regardless of your design experience.
+          </h1>
+          <h2 className={subtitle({ class: "mt-4" })}>
+            Beautiful, fast and modern React UI library.
+          </h2>
+        </div>
+      </div>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -70,11 +85,11 @@ const HeroSlider = () => {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 50,
           },
         }}
-        className="mySwiper"
+        className="mySwiper mt-12"
       >
         <div className="flex">
           {images.map((image, index) => (
@@ -83,8 +98,7 @@ const HeroSlider = () => {
                 <Image
                   isZoomed={true}
                   alt="NextUI hero Image"
-                  className=""
-                  // fallbackSrc="https://via.placeholder.com/300x200"
+                  className="w-[400px] object-center object-cover h-[340px]"                  // fallbackSrc="https://via.placeholder.com/300x200"
                   src={image.url}
                 />
               </div>
@@ -100,7 +114,7 @@ const HeroSlider = () => {
           ))}
         </div>
       </Swiper>
-    </>
+    </section>
   );
 };
 
