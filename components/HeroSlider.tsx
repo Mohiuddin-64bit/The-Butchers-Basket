@@ -98,7 +98,7 @@ const HeroSlider = () => {
                 <Image
                   isZoomed={true}
                   alt="NextUI hero Image"
-                  className="w-[400px] object-center object-cover h-[340px]"                  // fallbackSrc="https://via.placeholder.com/300x200"
+                  className="w-[400px] object-center object-cover h-[340px]"        
                   src={image.url}
                 />
               </div>
