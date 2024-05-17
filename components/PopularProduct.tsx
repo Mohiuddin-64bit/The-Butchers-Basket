@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import React from "react";
@@ -19,13 +20,9 @@ const cart = [
 const PopularProduct = () => {
   return (
     <section className="mx-auto mt-24 md:mt-12 lg:mt-0">
-      <div className="text-center py-12">
-        <h3 className="text-3xl font-bold mb-5">Top Categories</h3>
-        <p className="max-w-[90ch] mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut provident
-          impedit temporibus laboriosam ipsa hic saepe incidunt, enim maiores
-          natus molestiae quisquam.
-        </p>
+       <div className="flex justify-between items-center mb-12">
+        <h3 className="text-3xl font-bold">Most Popular Products</h3>
+        <Button>View All</Button>
       </div>
       <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
         {cart.map((item, index) => (

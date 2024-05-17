@@ -8,7 +8,7 @@ import React from "react";
 
 const TopCategories = () => {
   return (
-    <section className="mt-32 mx-auto">
+    <section className="mt-32 mx-auto mb-36">
       <div className="text-center py-12">
         <h3 className="text-3xl font-bold mb-5">Top Categories</h3>
         <p className="max-w-[90ch] mx-auto">
