@@ -63,7 +63,7 @@ export default function RootLayout({
                     </svg>
                   </div>
 
-                  <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
+                  <div className="mt-8 lg:mt-0 grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-y-16">
                     <div className="col-span-2">
                       <div>
                         <h2 className="text-2xl font-bold ">
@@ -76,19 +76,15 @@ export default function RootLayout({
                         </p>
                       </div>
                     </div>
-
                     <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end"></div>
-
                     <div className="col-span-2 sm:col-span-1">
                       <p className="font-medium">Services</p>
-
                       <ul className="mt-6 space-y-4 text-sm">
                         <li>
                           <a href="#" className="transition hover:opacity-75">
                             1on1 Coaching
                           </a>
                         </li>
-
                         <li>
                           <a href="#" className=" transition hover:opacity-75">
                             Company Review

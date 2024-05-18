@@ -16,21 +16,21 @@ const SingleProduct = ({ params }: any) => {
               height={128}
               className="h-32 w-36 object-cover"
               alt="NextUI hero Image with delay"
-              src="https://app.requestly.io/delay/5000/https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+              src="/images/1.jpg"
             />
             <Image
               width={144}
               height={128}
               className="h-32 w-36 object-cover"
               alt="NextUI hero Image with delay"
-              src="https://app.requestly.io/delay/5000/https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+              src="/images/2.jpg"
             />
             <Image
               width={144}
               height={128}
               className="h-32 w-36 object-cover"
               alt="NextUI hero Image with delay"
-              src="https://app.requestly.io/delay/5000/https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+              src="/images/1.jpg"
             />
           </div>
           <div className="col-span-12 md:col-span-10 lg:col-span-8">
@@ -40,7 +40,7 @@ const SingleProduct = ({ params }: any) => {
               isZoomed
               className="h-[420px] w-full object-cover"
               alt="NextUI hero Image with delay"
-              src="https://app.requestly.io/delay/5000/https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+              src="/images/1.jpg"
             />
           </div>
         </div>
