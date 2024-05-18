@@ -30,7 +30,7 @@ const PopularProduct = () => {
     <section className="mx-auto mt-24 md:mt-12 lg:mt-0">
       <div className="flex justify-between items-center mb-12">
         <h3 className="text-3xl font-bold">Most Popular Products</h3>
-        <Button>View All</Button>
+        <Link href="/meats"><Button>View All</Button></Link>
       </div>
       <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
         {cart.map((item, index) => (

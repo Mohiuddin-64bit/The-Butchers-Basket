@@ -1,4 +1,4 @@
-export default function MeatsLayout({
+export default function flashSale({
   children,
 }: {
   children: React.ReactNode;

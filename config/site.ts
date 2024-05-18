@@ -18,7 +18,7 @@ export const siteConfig = {
     },
     {
       label: "Flash Sale",
-      href: "/blog",
+      href: "/flash-sale",
     },
     {
       label: "About Us",
