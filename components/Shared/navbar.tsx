@@ -1,3 +1,5 @@
+
+
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
@@ -7,7 +9,6 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
@@ -20,10 +21,6 @@ import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-	TwitterIcon,
-	GithubIcon,
-	DiscordIcon,
-	HeartFilledIcon,
 	SearchIcon,
 } from "@/components/icons";
 
@@ -77,17 +74,13 @@ export const Navbar = () => {
 					))}
 				</ul>
 			</NavbarContent>
-
 				<NavbarItem className="hidden sm:flex gap-2">
 					<ThemeSwitch />
 				</NavbarItem>
-	
-
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
-
 			<NavbarMenu>
 				{searchInput}
 				<div className="mx-4 mt-2 flex flex-col gap-2">
@@ -101,7 +94,7 @@ export const Navbar = () => {
 										? "danger"
 										: "foreground"
 								}
-								href="#"
+								href={item.href}
 								size="lg"
 							>
 								{item.label}

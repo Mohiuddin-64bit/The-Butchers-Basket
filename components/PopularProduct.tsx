@@ -23,7 +23,7 @@ const PopularProduct = () => {
   const route = useRouter();
 
   const handleNavigateToProductDetail = (index: Number) => {
-    route.push(`/products/${index}`);
+    route.push(`/meats/${index}`);
   };
 
   return (

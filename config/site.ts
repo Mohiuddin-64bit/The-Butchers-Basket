@@ -9,9 +9,24 @@ export const siteConfig = {
 			href: "/",
 		},
     {
-      label: "Categories",
-      href: "/docs",
+      label: "Products",
+      href: "/meats",
     },
+    {
+      label: "Flash Sale",
+      href: "/flash-sale",
+    },
+    {
+      label: "Dashboard",
+      href: "/dashboard",
+    },
+
+	],
+	navMenuItems: [
+		{
+			label: "Home",
+			href: "/",
+		},
     {
       label: "Products",
       href: "/meats",
@@ -21,39 +36,9 @@ export const siteConfig = {
       href: "/flash-sale",
     },
     {
-      label: "About Us",
-      href: "/about",
+      label: "Dashboard",
+      href: "/dashboard",
     },
-    {
-      label: "Contact Us",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
-		{
-			label: "Home",
-			href: "/",
-		},
-    {
-      label: "Categories",
-      href: "/docs",
-    },
-    {
-      label: "Products",
-      href: "/products",
-    },
-    {
-      label: "Flash Sale",
-      href: "/blog",
-    },
-    {
-      label: "About Us",
-      href: "/about",
-    },
-    {
-      label: "Contact Us",
-      href: "/about",
-    }
 	],
 
 };

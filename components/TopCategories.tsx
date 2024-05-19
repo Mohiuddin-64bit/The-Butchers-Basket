@@ -20,68 +20,64 @@ const TopCategories = () => {
       <div className="gap-5 grid grid-cols-12  grid-rows-2">
         <Card className="col-span-12 sm:col-span-4 row-span-2">
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-            <p className="text-tiny text-white/60 uppercase font-bold">
-              What to watch
-            </p>
-            <h4 className="text-white font-medium text-large">
-              Stream the Acme event
-            </h4>
+            <div className="backdrop-blur-sm bg-black/30 rounded-lg">
+              <h4 className="text-white  font-medium text-large px-3 py-2">
+                Protein Source
+              </h4>
+            </div>
           </CardHeader>
           <Image
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="/images/1.jpg"
+            src="https://images.unsplash.com/photo-1613454320437-0c228c8b1723?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QmVlZnxlbnwwfHwwfHx8MA%3D%3D"
           />
         </Card>
 
         <Card className="col-span-12 sm:col-span-4 h-[300px]">
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-            <p className="text-tiny text-white/60 uppercase font-bold">
-              New arrivals
-            </p>
-            <h4 className="text-white font-medium text-large">
-              Discover the latest
-            </h4>
+            <div className="backdrop-blur-sm bg-black/30 rounded-lg">
+              <h4 className="text-white  font-medium text-large px-3 py-2">
+              Lamb
+              </h4>
+            </div>
           </CardHeader>
           <Image
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="/images/2.jpg"
+            src="https://plus.unsplash.com/premium_photo-1666620504958-4056c0def05b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGFtYiUyMG1lYXR8ZW58MHx8MHx8fDA%3D"
           />
         </Card>
         <Card className="col-span-12 sm:col-span-4 row-span-2">
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-            <p className="text-tiny text-white/60 uppercase font-bold">
-              Plant a tree
-            </p>
-            <h4 className="text-white font-medium text-large">
-              Contribute to the planet
-            </h4>
+          <div className="backdrop-blur-sm bg-black/30 rounded-lg">
+              <h4 className="text-white  font-medium text-large px-3 py-2">
+                Chicken Meat
+              </h4>
+            </div>
           </CardHeader>
           <Image
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="/images/2.jpg"
+            src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q2hpY2tlbiUyMG1lYXR8ZW58MHx8MHx8fDA%3D"
           />
         </Card>
 
         <Card className="col-span-12 sm:col-span-4 h-[300px]">
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-            <p className="text-tiny text-white/60 uppercase font-bold">
-              Supercharged
-            </p>
-            <h4 className="text-white font-medium text-large">
-              Creates beauty like a beast
-            </h4>
+          <div className="backdrop-blur-sm bg-black/30 rounded-lg">
+              <h4 className="text-white  font-medium text-large px-3 py-2">
+                Frozen Meat
+              </h4>
+            </div>
           </CardHeader>
           <Image
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
-            src="/images/4.jpg"
+            src="https://images.unsplash.com/photo-1551028150-64b9f398f678?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8R3JvdW5kJTIwTWVhdHxlbnwwfHwwfHx8MA%3D%3D"
           />
         </Card>
       </div>
