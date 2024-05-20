@@ -27,6 +27,7 @@ const TopCategories = () => {
             </div>
           </CardHeader>
           <Image
+            isZoomed
             removeWrapper
             alt="Card background"
             className="z-0 w-full h-full object-cover"
@@ -38,12 +39,13 @@ const TopCategories = () => {
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <div className="backdrop-blur-sm bg-black/30 rounded-lg">
               <h4 className="text-white  font-medium text-large px-3 py-2">
-              Lamb
+                Lamb
               </h4>
             </div>
           </CardHeader>
           <Image
             removeWrapper
+            isZoomed
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src="https://plus.unsplash.com/premium_photo-1666620504958-4056c0def05b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGFtYiUyMG1lYXR8ZW58MHx8MHx8fDA%3D"
@@ -51,7 +53,7 @@ const TopCategories = () => {
         </Card>
         <Card className="col-span-12 sm:col-span-4 row-span-2">
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-          <div className="backdrop-blur-sm bg-black/30 rounded-lg">
+            <div className="backdrop-blur-sm bg-black/30 rounded-lg">
               <h4 className="text-white  font-medium text-large px-3 py-2">
                 Chicken Meat
               </h4>
@@ -59,6 +61,7 @@ const TopCategories = () => {
           </CardHeader>
           <Image
             removeWrapper
+            isZoomed
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q2hpY2tlbiUyMG1lYXR8ZW58MHx8MHx8fDA%3D"
@@ -67,7 +70,7 @@ const TopCategories = () => {
 
         <Card className="col-span-12 sm:col-span-4 h-[300px]">
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-          <div className="backdrop-blur-sm bg-black/30 rounded-lg">
+            <div className="backdrop-blur-sm bg-black/30 rounded-lg">
               <h4 className="text-white  font-medium text-large px-3 py-2">
                 Frozen Meat
               </h4>
@@ -75,6 +78,7 @@ const TopCategories = () => {
           </CardHeader>
           <Image
             removeWrapper
+            isZoomed
             alt="Card background"
             className="z-0 w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1551028150-64b9f398f678?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8R3JvdW5kJTIwTWVhdHxlbnwwfHwwfHx8MA%3D%3D"

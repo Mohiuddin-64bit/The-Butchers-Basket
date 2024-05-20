@@ -49,7 +49,7 @@ const list = [
 ];
 
 const AllMeats = async () => {
-  const res = await fetch("http://localhost:5000/product", {
+  const res = await fetch("https://the-butchers-basket-backend.vercel.app/product", {
     cache: "no-cache",
   });
   const data = await res.json();

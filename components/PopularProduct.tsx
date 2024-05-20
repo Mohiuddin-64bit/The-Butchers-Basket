@@ -19,12 +19,11 @@ const PopularProduct = async () => {
   //   route.push(`/meats/${index}`);
   // };
 
-  const res = await fetch("http://localhost:5000/product", {
+  const res = await fetch("https://the-butchers-basket-backend.vercel.app/product", {
     cache: "no-cache",
   });
   const data = await res.json();
   const popularItem = [...data].sort((a: any, b: any) => b.rating - a.rating);
-  console.log(popularItem);
 
   return (
     <section className="mx-auto mt-24 md:mt-12 lg:mt-0">

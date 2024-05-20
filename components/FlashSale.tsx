@@ -5,7 +5,7 @@ import Link from "next/link";
 import CountDown from "./CountDown";
 
 const FlashSale = async () => {
-  const res = await fetch("http://localhost:5000/product", {
+  const res = await fetch("https://the-butchers-basket-backend.vercel.app/product", {
     next: {
       revalidate: 30,
     },
