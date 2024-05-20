@@ -5,7 +5,25 @@ import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import React from "react";
 
-const SingleProduct = ({ params }: any) => {
+export const generateStaticParams = async () => {
+  const res = await fetch("http://localhost:5000/product", {
+    cache: "no-cache",
+  });
+  const data = await res.json();
+  return data.slice(0, 5).map((item: any) => ({
+    meatsId: item._id ,
+  }));
+};
+
+const SingleProduct = async ({ params }: any) => {
+  const res = await fetch(`http://localhost:5000/product/${params.meatsId}`, {
+    cache: "no-cache",
+  });
+  const data = await res.json();
+  console.log(data);
+
+  const { imageLink, category, title, price, _id, description } = data;
+
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -40,13 +58,13 @@ const SingleProduct = ({ params }: any) => {
               isZoomed
               className="h-[420px] w-full object-cover"
               alt="NextUI hero Image with delay"
-              src="/images/1.jpg"
+              src={imageLink}
             />
           </div>
         </div>
         <div className="w-full">
-          <h3 className="text-3xl font-semibold">Double bed and side tables</h3>
-          <p className="text-2xl mb-7">$45.33</p>
+          <h3 className="text-3xl font-semibold">{title}</h3>
+          <p className="text-2xl mb-7">${price}</p>
           <p className="text-lg mb-7">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             suscipit, nunc euismod efficitur ultricies, purus felis varius
@@ -75,23 +93,13 @@ const SingleProduct = ({ params }: any) => {
       <div className="mt-24">
         <h3 className="mb-12 text-3xl font-bold">Description</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          suscipit, nunc euismod efficitur ultricies, purus felis varius libero,
-          vel ultricies nunc nisl vitae nunc. Donec sed semper tellus. Donec in
-          libero nec libero eleifend aliquam. Nullam suscipit, nunc euismod
-          efficitur ultricies, purus felis varius libero, vel ultricies nunc
-          nisl vitae nunc. Donec sed semper tellus. Donec in libero nec libero
-          eleifend aliquam.purus felis varius libero, vel ultricies nunc
-          nisl vitae nunc. Donec sed semper tellus. Donec in libero nec libero
-          eleifend aliquam.purus felis varius libero, vel ultricies nunc
-          nisl vitae nunc. Donec sed semper tellus. Donec in libero nec libero
-          eleifend aliquam.
+         {description}
         </p>
         <ul className="list-disc ml-5 mt-4">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          </ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
       </div>
     </>
   );

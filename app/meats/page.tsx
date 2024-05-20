@@ -1,12 +1,9 @@
-"use client";
-
 import FilterProducts from "@/components/FilterProducts";
 import MobileFilter from "@/components/MobileFilter";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@nextui-org/button";
 import { Progress } from "@nextui-org/progress";
 import React from "react";
-
 
 const list = [
   {
@@ -51,8 +48,12 @@ const list = [
   },
 ];
 
-const AllMeats = () => {
-
+const AllMeats = async () => {
+  const res = await fetch("http://localhost:5000/product", {
+    cache: "no-cache",
+  });
+  const data = await res.json();
+  console.log(data);
 
   return (
     <div className="grid grid-cols-12 gap-4 sm:gap-12">
@@ -72,8 +73,8 @@ const AllMeats = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {list.map((item, index) => (
-            <ProductCard key={index} item={item} />
+          {data.map((item:any) => (
+            <ProductCard key={item._id} item={item} />
           ))}
         </div>
         <div className="text-center mt-12">
@@ -87,10 +88,9 @@ const AllMeats = () => {
             value={60}
             className="max-w-lg mx-auto mb-7"
           />
-          <Button className="px-20 rounded-3xl">Load More</Button>
+          {/* <Button className="px-20 rounded-3xl">Load More</Button> */}
         </div>
       </div>
-      
     </div>
   );
 };

@@ -16,7 +16,7 @@ export default function Home() {
         <TopCategories />
         <PopularProduct />
         <Footer />
-        
+
         {/* <Partners /> */}
       </div>
     </>

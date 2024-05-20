@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { title, subtitle } from "@/components/primitives";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -48,14 +47,12 @@ const HeroSlider = () => {
     <section className="h-screen">
       <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block text-center justify-center">
-          <h1 className={title()}>Make&nbsp;</h1>
-          <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+          <h1 className={title()}>The Butcher&apos;s&nbsp;</h1>
+          <h1 className={title({ color: "violet" })}>Basket&nbsp;</h1>
           <br />
-          <h1 className={title()}>
-            websites regardless of your design experience.
-          </h1>
           <h2 className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
+            Where Quality Meets Freshness - Delivering Heritage Breeds Straight
+            to Your Kitchen
           </h2>
         </div>
       </div>
@@ -98,7 +95,7 @@ const HeroSlider = () => {
                 <Image
                   isZoomed={true}
                   alt="NextUI hero Image"
-                  className="w-[400px] object-center object-cover h-[340px]"        
+                  className="w-[400px] object-center object-cover h-[340px]"
                   src={image.url}
                 />
               </div>

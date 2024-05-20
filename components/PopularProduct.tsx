@@ -22,9 +22,9 @@ const cart = [
 const PopularProduct = () => {
   const route = useRouter();
 
-  const handleNavigateToProductDetail = (index: Number) => {
-    route.push(`/meats/${index}`);
-  };
+  // const handleNavigateToProductDetail = (index: Number) => {
+  //   route.push(`/meats/${index}`);
+  // };
 
   return (
     <section className="mx-auto mt-24 md:mt-12 lg:mt-0">
@@ -35,7 +35,7 @@ const PopularProduct = () => {
       <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
         {cart.map((item, index) => (
           <Card
-            onClick={() => handleNavigateToProductDetail(index)}
+            // onClick={() => handleNavigateToProductDetail(index)}
             key={index}
             shadow="sm"
             isPressable
