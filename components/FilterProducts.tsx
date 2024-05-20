@@ -1,3 +1,5 @@
+"use client"
+
 import { Checkbox } from "@nextui-org/checkbox";
 import React from "react";
 

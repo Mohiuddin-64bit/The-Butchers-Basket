@@ -4,12 +4,14 @@ import React from "react";
 
 
 const FlashSale = async() => {
-  const res = await fetch("http://localhost:5000/flash-sale", {
-    next:{
+  const res = await fetch("http://localhost:5000/product", {
+    next: {
       revalidate: 30,
-    }
+    },
   });
   const data = await res.json();
+  const flashSale = data.filter((item: any) => item.isFlashSale === true);
+  console.log(flashSale)
 
   return (
     <>
@@ -23,7 +25,7 @@ const FlashSale = async() => {
         </p>
       </header>
       <main className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-4">
-        {data.map((item:any) => (
+        {flashSale.map((item:any) => (
           <ProductCard key={item._id} item={item} />
         ))}
       </main>

@@ -10,9 +10,6 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 const ProductCard = (props:any) => {
   const route = useRouter();
 
-  // const handleNavigateToProductDetail = (index: Number) => {
-  //   route.push(`/meats/${index}`);
-  // };
 
 
   const { imageLink, category, title, price, _id } = props.item;
@@ -31,7 +28,7 @@ const ProductCard = (props:any) => {
         </CardBody>
         <CardFooter className="text-small justify-between">
           <div className="flex flex-col">
-            <p className="text-lg mt-2">{category}</p>
+            <p className="text-lg mt-2">{title}</p>
             <div className="flex gap-2">
               <del className="text-sm text-gray-500">$20</del>
               <p className="text-sm">${price}</p>

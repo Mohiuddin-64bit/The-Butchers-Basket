@@ -1,12 +1,7 @@
-"use client";
-
 import { Button } from "@nextui-org/button";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
-import { Image } from "@nextui-org/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
-import { IoMdAddCircleOutline } from "react-icons/io";
+import ProductCard from "./ProductCard";
 
 const cart = [
   { url: "/images/2.jpg" },
@@ -19,49 +14,29 @@ const cart = [
   { url: "/images/2.jpg" },
 ];
 
-const PopularProduct = () => {
-  const route = useRouter();
-
+const PopularProduct = async () => {
   // const handleNavigateToProductDetail = (index: Number) => {
   //   route.push(`/meats/${index}`);
   // };
+
+  const res = await fetch("http://localhost:5000/product", {
+    cache: "no-cache",
+  });
+  const data = await res.json();
+  const popularItem = [...data].sort((a: any, b: any) => b.rating - a.rating);
+  console.log(popularItem);
 
   return (
     <section className="mx-auto mt-24 md:mt-12 lg:mt-0">
       <div className="flex justify-between items-center mb-12">
         <h3 className="text-3xl font-bold">Most Popular Products</h3>
-        <Link href="/meats"><Button>View All</Button></Link>
+        <Link href="/meats">
+          <Button>View All</Button>
+        </Link>
       </div>
       <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-        {cart.map((item, index) => (
-          <Card
-            // onClick={() => handleNavigateToProductDetail(index)}
-            key={index}
-            shadow="sm"
-            isPressable
-            onPress={() => console.log("item pressed")}
-          >
-            <CardBody className="overflow-visible p-0">
-              <Image
-                shadow="sm"
-                radius="lg"
-                width="100%"
-                alt={item.url}
-                className="w-full object-cover h-[340px]"
-                src={item.url}
-              />
-            </CardBody>
-            <CardFooter className="text-small justify-between">
-              <div className="flex flex-col">
-                <p className="text-lg mt-2">Vegetables</p>
-                <div className="flex gap-2">
-                  <del className="text-sm text-gray-500">$20</del>
-                  <p className="text-sm">$20</p>
-                </div>
-              </div>
-              <IoMdAddCircleOutline className="text-xl cursor-pointer" />
-            </CardFooter>
-          </Card>
+        {popularItem.slice(0, 4).map((item, index) => (
+          <ProductCard key={index} item={item} />
         ))}
       </div>
     </section>

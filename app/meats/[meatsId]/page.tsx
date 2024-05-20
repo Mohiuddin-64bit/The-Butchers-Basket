@@ -22,7 +22,7 @@ const SingleProduct = async ({ params }: any) => {
   const data = await res.json();
   console.log(data);
 
-  const { imageLink, category, title, price, _id, description } = data;
+  const { imageLink, rating, category, title, price, _id, description } = data;
 
   return (
     <>
@@ -66,14 +66,15 @@ const SingleProduct = async ({ params }: any) => {
           <h3 className="text-3xl font-semibold">{title}</h3>
           <p className="text-2xl mb-7">${price}</p>
           <p className="text-lg mb-7">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            suscipit, nunc euismod efficitur ultricies, purus felis varius
-            libero, vel ultricies nunc nisl vitae nunc. Donec sed semper tellus.
-            Donec in libero nec libero eleifend aliquam. Nullam suscipit, nunc
-            euismod efficitur ultricies, purus felis varius libero, vel
-            ultricies nunc nisl vitae nunc. Donec sed semper tellus. Donec in
-            libero nec libero eleifend aliquam.
+            Category: <span className="font-semibold">{category}</span>
           </p>
+          <div className="flex items-center gap-3 mb-7">
+            <span>Rating:</span>
+            <div className="flex gap-1">
+              <span>{rating}</span>
+              <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
           <ul className="list-disc ml-5 mb-4">
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
