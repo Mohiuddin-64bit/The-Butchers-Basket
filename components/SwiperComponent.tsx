@@ -12,8 +12,9 @@ import "swiper/css/pagination";
 // import required modules
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import { Image } from "@nextui-org/image";
+import { Product } from "@/types";
 
-const SwiperComponent = ({ data } : {data: React.ReactNode}) => {
+const SwiperComponent = ({ data } : {data: Product}) => {
   return (
     <Swiper
       slidesPerView={3}
@@ -48,8 +49,8 @@ const SwiperComponent = ({ data } : {data: React.ReactNode}) => {
       className="mySwiper mt-12"
     >
       <div className="flex">
-        {data?.map((item, index) => (
-          <SwiperSlide className="mb-12" key={index}>
+        {Array.isArray(data) && data.map((item : Product) => (
+          <SwiperSlide className="mb-12" key={item._id}>
             <div className="flex items-center justify-center">
               <Image
                 isZoomed={true}
