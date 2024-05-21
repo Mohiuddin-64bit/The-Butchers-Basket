@@ -19,7 +19,7 @@ const PopularProduct = async () => {
   //   route.push(`/meats/${index}`);
   // };
 
-  const res = await fetch("https://the-butchers-basket-backend.vercel.app/product", {
+  const res = await fetch("http://localhost:5000/product", {
     cache: "no-cache",
   });
   const data = await res.json();

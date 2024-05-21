@@ -28,7 +28,7 @@ const FilterProducts = () => {
       <div className="border dark:border-gray-600 px-4 sm:px-8 lg:px-12 py-5 my-5">
         <h3 className="text-2xl font-bold">Categories</h3>
         <ul className="mt-4">
-          {["Buffalo", "Chicken", "Beef", "Goat", "Lamb"].map(
+          {["Buffalo", "Poultry", "Beef", "Lamb"].map(
             (category, index) => (
               <li key={index} className="text-sm pb-3">
                 <Checkbox>{category}</Checkbox>

@@ -6,7 +6,7 @@ import { Image } from "@nextui-org/image";
 import React from "react";
 
 export const generateStaticParams = async () => {
-  const res = await fetch("https://the-butchers-basket-backend.vercel.app/product", {
+  const res = await fetch("http://localhost:5000/product", {
     cache: "no-cache",
   });
   const data = await res.json();
@@ -16,7 +16,7 @@ export const generateStaticParams = async () => {
 };
 
 const SingleProduct = async ({ params }: any) => {
-  const res = await fetch(`https://the-butchers-basket-backend.vercel.app/product/${params.meatsId}`, {
+  const res = await fetch(`http://localhost:5000/product/${params.meatsId}`, {
     cache: "no-cache",
   });
   const data = await res.json();
