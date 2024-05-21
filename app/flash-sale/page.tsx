@@ -10,7 +10,6 @@ const FlashSale = async() => {
   });
   const data = await res.json();
   const flashSale = data.filter((item: any) => item.isFlashSale === true);
-  console.log(flashSale)
 
   return (
     <>

@@ -15,7 +15,6 @@ const AllMeats = async ({searchParams} : {searchParams: string}) => {
     cache: "no-cache",
   });
   const data = await res.json();
-  console.log(data);
 
   return (
     <div className="grid grid-cols-12 gap-4 sm:gap-12">

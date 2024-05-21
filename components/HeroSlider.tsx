@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,74 +43,78 @@ const images = [
 
 const HeroSlider = () => {
   return (
-    <section className="h-screen">
-      <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block text-center justify-center">
-          <h1 className={title()}>The Butcher&apos;s&nbsp;</h1>
-          <h1 className={title({ color: "violet" })}>Basket&nbsp;</h1>
-          <br />
-          <h2 className={subtitle({ class: "mt-4" })}>
-            Where Quality Meets Freshness - Delivering Heritage Breeds Straight
-            to Your Kitchen
-          </h2>
+    <>
+      <section className="h-screen">
+        <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+          <div className="inline-block text-center justify-center">
+            <h1 className={title()}>The Butcher&apos;s&nbsp;</h1>
+            <h1 className={title({ color: "violet" })}>Basket&nbsp;</h1>
+            <br />
+            <h2 className={subtitle({ class: "mt-4" })}>
+              Where Quality Meets Freshness - Delivering Heritage Breeds
+              Straight to Your Kitchen
+            </h2>
+          </div>
         </div>
-      </div>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Pagination, Autoplay]}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        }}
-        className="mySwiper mt-12"
-      >
-        <div className="flex">
-          {images.map((image, index) => (
-            <SwiperSlide className="mb-12" key={index}>
-              <div className="flex items-center justify-center">
-                <Image
-                  isZoomed={true}
-                  alt="NextUI hero Image"
-                  className="w-[400px] object-center object-cover h-[340px]"
-                  src={image.url}
-                />
-              </div>
-              <p className="text-lg mt-2">Double Bed</p>
-              <div className="mt-3 flex items-center justify-between">
-                <div className="flex gap-2">
-                  <del className="text-sm text-gray-500">$20</del>
-                  <p className="text-sm">$20</p>
-                </div>
-                <IoMdAddCircleOutline className="text-xl cursor-pointer" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </div>
-      </Swiper>
-    </section>
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination, Autoplay]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
+          className="mySwiper mt-12"
+        >
+          <div className="flex">
+            <>
+              {images.map((image, index) => (
+                <SwiperSlide className="mb-12" key={index}>
+                  <div className="flex items-center justify-center">
+                    <Image
+                      isZoomed={true}
+                      alt="NextUI hero Image"
+                      className="w-[400px] object-center object-cover h-[340px]"
+                      src={image.url}
+                    />
+                  </div>
+                  <p className="text-lg mt-2">Double Bed</p>
+                  <div className="mt-3 flex items-center justify-between">
+                    <div className="flex gap-2">
+                      <del className="text-sm text-gray-500">$20</del>
+                      <p className="text-sm">$20</p>
+                    </div>
+                    <IoMdAddCircleOutline className="text-xl cursor-pointer" />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </>
+          </div>
+        </Swiper>
+      </section>
+    </>
   );
 };
 
