@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
             </svg>
           </div>
 
-          <div className="mt-8 lg:mt-0 grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-y-16">
+          <div className="mt-8 lg:mt-0 grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-y-16">
             <div className="col-span-2">
               <div>
                 <h2 className="text-2xl font-bold ">Get the latest news!</h2>
@@ -32,35 +33,29 @@ const Footer = () => {
             </div>
             <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end"></div>
             <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium">Services</p>
+              <p className="font-medium">Pages</p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a href="#" className="transition hover:opacity-75">
-                    1on1 Coaching
-                  </a>
+                  <Link href="/" className="transition hover:opacity-75">
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Company Review
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Accounts Review
-                  </a>
+                  <Link href="meats" className=" transition hover:opacity-75">
+                    Products
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    HR Consulting
-                  </a>
+                  <Link href="/flash-sale" className=" transition hover:opacity-75">
+                    Flash Sale
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    SEO Optimisation
-                  </a>
+                  <Link href="/dashboard" className=" transition hover:opacity-75">
+                    Dashboard
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -84,60 +79,6 @@ const Footer = () => {
                 <li>
                   <a href="#" className=" transition hover:opacity-75">
                     Accounts Review
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium">Helpful Links</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Contact
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    FAQs
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Live Chat
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium">Legal</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Accessibility
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Returns Policy
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Refund Policy
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className=" transition hover:opacity-75">
-                    Hiring Statistics
                   </a>
                 </li>
               </ul>

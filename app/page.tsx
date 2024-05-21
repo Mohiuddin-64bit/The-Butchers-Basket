@@ -1,6 +1,5 @@
 import FlashSale from "@/components/FlashSale";
 import HeroSlider from "@/components/HeroSlider";
-import Partners from "@/components/Partners";
 import PopularProduct from "@/components/PopularProduct";
 import Footer from "@/components/Shared/Footer";
 import { Navbar } from "@/components/Shared/navbar";
@@ -16,8 +15,6 @@ export default function Home() {
         <TopCategories />
         <PopularProduct />
         <Footer />
-
-        {/* <Partners /> */}
       </div>
     </>
   );

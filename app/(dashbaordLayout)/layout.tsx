@@ -3,7 +3,7 @@ import DashboardNav from "@/components/Shared/DashboardNav";
 import DashboardSidebar from "@/components/Shared/DashboardSidebar";
 import React from "react";
 
-const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex flex-col h-screen">
       <div className="w-full">

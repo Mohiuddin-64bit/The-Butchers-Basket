@@ -11,10 +11,10 @@ const DashboardNav = () => {
         <div className="flex items-center gap-4">
           <ThemeSwitch />
           <User
-            name="Jane Doe"
-            description="Product Designer"
+            name="Md Mohiuddin"
+            description="Admin"
             avatarProps={{
-              src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+              src: "/images/1.jpg",
             }}
           />
         </div>

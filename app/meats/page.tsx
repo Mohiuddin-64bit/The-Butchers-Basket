@@ -11,7 +11,7 @@ const AllMeats = async ({searchParams} : {searchParams: string}) => {
   
 
 
-  const res = await fetch(`http://localhost:5000/product?${params}`, {
+  const res = await fetch(`https://the-butchers-basket-backend.vercel.app/product?${params}`, {
     cache: "no-cache",
   });
   const data = await res.json();

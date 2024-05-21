@@ -6,7 +6,7 @@ import { Image } from "@nextui-org/image";
 import React from "react";
 
 export const generateStaticParams = async () => {
-  const res = await fetch("http://localhost:5000/product", {
+  const res = await fetch("https://the-butchers-basket-backend.vercel.app/product", {
     cache: "no-cache",
   });
   const data = await res.json();
@@ -16,11 +16,10 @@ export const generateStaticParams = async () => {
 };
 
 const SingleProduct = async ({ params }: any) => {
-  const res = await fetch(`http://localhost:5000/product/${params.meatsId}`, {
+  const res = await fetch(`https://the-butchers-basket-backend.vercel.app/product/${params.meatsId}`, {
     cache: "no-cache",
   });
   const data = await res.json();
-  console.log(data);
 
   const { imageLink, rating, category, title, price, _id, description } = data;
 
@@ -34,21 +33,21 @@ const SingleProduct = async ({ params }: any) => {
               height={128}
               className="h-32 w-36 object-cover"
               alt="NextUI hero Image with delay"
-              src="/images/1.jpg"
+              src={imageLink}
             />
             <Image
               width={144}
               height={128}
               className="h-32 w-36 object-cover"
               alt="NextUI hero Image with delay"
-              src="/images/2.jpg"
+              src={imageLink}
             />
             <Image
               width={144}
               height={128}
               className="h-32 w-36 object-cover"
               alt="NextUI hero Image with delay"
-              src="/images/1.jpg"
+              src={imageLink}
             />
           </div>
           <div className="col-span-12 md:col-span-10 lg:col-span-8">
