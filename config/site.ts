@@ -13,6 +13,10 @@ export const siteConfig = {
       href: "/meats",
     },
     {
+      label: "Categories",
+      href: "/categories",
+    },
+    {
       label: "Flash Sale",
       href: "/flash-sale",
     },
@@ -30,6 +34,10 @@ export const siteConfig = {
     {
       label: "Products",
       href: "/meats",
+    },
+    {
+      label: "Categories",
+      href: "/categories",
     },
     {
       label: "Flash Sale",

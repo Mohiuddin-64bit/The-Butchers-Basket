@@ -9,7 +9,6 @@ const Footer = () => {
         <div className="lg:flex lg:items-start lg:gap-8">
           <Link href="/">
             <Image
-              isZoomed={true}
               alt="NextUI hero Image"
               className="w-32 pt-12 hidden lg:flex"
               src="/logo.png"
