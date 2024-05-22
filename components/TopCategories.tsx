@@ -94,9 +94,10 @@ const TopCategories = () => {
           </Link>
         </Card>
       </div>
-      <div className="text-center">
+
+      <Link href="/categories" className="text-center block mx-auto">
         <Button className="mt-10">View All</Button>
-      </div>
+      </Link>
     </section>
   );
 };
