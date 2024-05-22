@@ -24,10 +24,10 @@ const CountDown = () => {
   }, [time]);
 
   return (
-    <div className=" flex gap-3 ">
-        <span className="text-2xl backdrop-blur-md bg-black/20 dark:bg-white/20 rounded-lg px-4 ">{time.hours}</span>:
-        <span className="text-2xl backdrop-blur-md bg-black/20 dark:bg-white/20 rounded-lg px-4 ">{time.minutes}</span>:
-        <span className="text-2xl backdrop-blur-md bg-black/20 dark:bg-white/20 rounded-lg px-4 ">{time.seconds}</span>
+    <div className=" flex gap-3 flex-wrap">
+        <span className="text-2xl backdrop-blur-md bg-black/20 dark:bg-white/20 rounded-lg px-4 ">{time.hours} h</span>:
+        <span className="text-2xl backdrop-blur-md bg-black/20 dark:bg-white/20 rounded-lg px-4 ">{time.minutes} m</span>:
+        <span className="text-2xl backdrop-blur-md bg-black/20 dark:bg-white/20 rounded-lg px-4 ">{time.seconds} s</span>
     </div>
   );
 };

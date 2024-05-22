@@ -2,6 +2,11 @@
 
 This project is built with Next.js 14 and NextUI v2, along with other technologies such as Tailwind CSS, TypeScript, and Framer Motion.
 
+## 🔗Live Link
+
+- [The Butcher's Basket](https://the-butchers-basket.vercel.app/)
+
+
 ## Technologies Used
 
 - [Next.js 14](https://nextjs.org/docs/getting-started)
