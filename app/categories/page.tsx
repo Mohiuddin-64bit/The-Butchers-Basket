@@ -46,7 +46,7 @@ const CategoriesPage = async () => {
                 className="w-[300px] object-cover h-[200px] md:h-[280px] lg:h-[340px]"
                 src={images.map((image: any) => image)[index]}
               />
-              <div className="absolute backdrop-blur-md dark:bg-black/30  dark:text-white text-4xl font-semibold z-10 top-0 left-0 w-full h-full flex items-center justify-center p-20">
+              <div className="absolute backdrop-blur-md dark:bg-black/30  dark:text-white text-3xl font-semibold z-10 top-0 left-0 w-full h-full flex items-center justify-center p-20">
                 <h4>{item}</h4>
               </div>
             </CardBody>

@@ -12,7 +12,7 @@ const HeroSlider = async() => {
 
   return (
     <>
-      <section className="h-screen">
+      <section className="h-[700px] md:h-[800px]">
         <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
           <div className="inline-block text-center justify-center">
             <h1 className={title()}>The Butcher&apos;s&nbsp;</h1>
