@@ -14,8 +14,8 @@ const TopCategories = () => {
         <h3 className="text-3xl font-bold mb-5">Top Categories</h3>
         <p className="max-w-[90ch] mx-auto">
           Explore our top categories and discover a wide range of products.
-          Whether you're looking for electronics, fashion, home goods, or more,
-          we've got you covered. Enjoy shopping with us!
+          Whether youre looking for electronics, fashion, home goods, or more,
+          weve got you covered. Enjoy shopping with us!
         </p>
       </div>
       <div className="gap-5 grid grid-cols-12  grid-rows-2">
