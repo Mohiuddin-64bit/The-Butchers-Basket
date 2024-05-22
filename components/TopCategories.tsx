@@ -13,9 +13,9 @@ const TopCategories = () => {
       <div className="text-center py-12">
         <h3 className="text-3xl font-bold mb-5">Top Categories</h3>
         <p className="max-w-[90ch] mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut provident
-          impedit temporibus laboriosam ipsa hic saepe incidunt, enim maiores
-          natus molestiae quisquam.
+          Explore our top categories and discover a wide range of products.
+          Whether you're looking for electronics, fashion, home goods, or more,
+          we've got you covered. Enjoy shopping with us!
         </p>
       </div>
       <div className="gap-5 grid grid-cols-12  grid-rows-2">

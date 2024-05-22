@@ -50,12 +50,12 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-              <Image
-                isZoomed={true}
-                alt="NextUI hero Image"
-                className="w-32 pt-12"
-                src="/logo.png"
-              />
+            <Image
+              isZoomed={true}
+              alt="NextUI hero Image"
+              className="w-32 pt-12"
+              src="/logo.png"
+            />
           </NextLink>
         </NavbarBrand>
         <ul className="hidden sm:flex gap-4 justify-center mx-auto pr-12">
@@ -86,20 +86,8 @@ export const Navbar = () => {
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-                }
-                href={item.href}
-                size="lg"
-              >
-                {item.label}
-              </Link>
+            <NavbarMenuItem key={item.href}>
+              <NextLink href={item.href}>{item.label}</NextLink>
             </NavbarMenuItem>
           ))}
         </div>

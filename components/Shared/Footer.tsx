@@ -22,8 +22,7 @@ const Footer = () => {
                 <h2 className="text-2xl font-bold ">Get the latest news!</h2>
 
                 <p className="mt-4 ">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                  non cupiditate quae nam molestias.
+                 Thank you for visiting our website. We are committed to providing you with the best service possible. If you have any questions or concerns, please dont hesitate to contact us.
                 </p>
               </div>
             </div>

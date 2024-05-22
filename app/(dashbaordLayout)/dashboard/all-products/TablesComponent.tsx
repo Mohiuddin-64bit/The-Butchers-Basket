@@ -42,7 +42,7 @@ const columns = [
 
 const TablesComponent = ({ data } : {data: React.ReactNode}) => {
   return (
-    <Table isStriped aria-label="Example table with dynamic content">
+    <Table className="" isStriped aria-label="Example table with dynamic content">
       <TableHeader columns={columns}>
         {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
       </TableHeader>

@@ -5,15 +5,15 @@ import { Button } from "@nextui-org/button";
 import { Progress } from "@nextui-org/progress";
 import React from "react";
 
-
-const AllMeats = async ({searchParams} : {searchParams: string}) => {
+const AllMeats = async ({ searchParams }: { searchParams: string }) => {
   const params = new URLSearchParams(searchParams);
-  
 
-
-  const res = await fetch(`https://the-butchers-basket-backend.vercel.app/product?${params}`, {
-    cache: "no-cache",
-  });
+  const res = await fetch(
+    `https://the-butchers-basket-backend.vercel.app/product?${params}`,
+    {
+      cache: "no-cache",
+    }
+  );
   const data = await res.json();
 
   return (
@@ -26,15 +26,16 @@ const AllMeats = async ({searchParams} : {searchParams: string}) => {
           <h3 className="text-4xl font-bold">Our Collection of Meats</h3>
           <p className="mt-2 font-semibold">Showing 1–12 of 24 item(s)</p>
           <p className="mb-12 mt-3 text-sm">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil,
-            quae?
+            Discover a wide range of products tailored to your needs. Our
+            commitment to quality and customer satisfaction makes us a trusted
+            choice for shoppers.
           </p>
           <div className="mb-3 block sm:hidden">
             <MobileFilter />
           </div>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.map((item:any) => (
+          {data.map((item: any) => (
             <ProductCard key={item._id} item={item} />
           ))}
         </div>

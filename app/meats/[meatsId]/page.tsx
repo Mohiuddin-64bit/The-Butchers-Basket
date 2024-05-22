@@ -6,19 +6,25 @@ import { Image } from "@nextui-org/image";
 import React from "react";
 
 export const generateStaticParams = async () => {
-  const res = await fetch("https://the-butchers-basket-backend.vercel.app/product", {
-    cache: "no-cache",
-  });
+  const res = await fetch(
+    "https://the-butchers-basket-backend.vercel.app/product",
+    {
+      cache: "no-cache",
+    }
+  );
   const data = await res.json();
   return data.slice(0, 5).map((item: any) => ({
-    meatsId: item._id ,
+    meatsId: item._id,
   }));
 };
 
 const SingleProduct = async ({ params }: any) => {
-  const res = await fetch(`https://the-butchers-basket-backend.vercel.app/product/${params.meatsId}`, {
-    cache: "no-cache",
-  });
+  const res = await fetch(
+    `https://the-butchers-basket-backend.vercel.app/product/${params.meatsId}`,
+    {
+      cache: "no-cache",
+    }
+  );
   const data = await res.json();
 
   const { imageLink, rating, category, title, price, _id, description } = data;
@@ -75,9 +81,11 @@ const SingleProduct = async ({ params }: any) => {
             </div>
           </div>
           <ul className="list-disc ml-5 mb-4">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>High-quality materials ensure durability and longevity.</li>
+            <li>Designed with user comfort and convenience in mind.</li>
+            <li>
+              Available in a variety of colors and sizes to suit your needs.
+            </li>
           </ul>
 
           <p className="flex items-center gap-3">
@@ -92,13 +100,11 @@ const SingleProduct = async ({ params }: any) => {
       </div>
       <div className="mt-24">
         <h3 className="mb-12 text-3xl font-bold">Description</h3>
-        <p>
-         {description}
-        </p>
+        <p>{description}</p>
         <ul className="list-disc ml-5 mt-4">
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Easy to use, with a user-friendly interface.</li>
+          <li>Fast and efficient, saving you time and effort.</li>
+          <li>Reliable and secure, giving you peace of mind.</li>
         </ul>
       </div>
     </>
