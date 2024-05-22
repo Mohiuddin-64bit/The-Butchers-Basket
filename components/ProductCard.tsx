@@ -28,13 +28,12 @@ const ProductCard = (props:any) => {
         </CardBody>
         <CardFooter className="text-small justify-between">
           <div className="flex flex-col">
-            <p className="text-lg mt-2">{title}</p>
+            <p className="text-lg text-start mt-2">{title}</p>
             <div className="flex gap-2">
               <del className="text-sm text-gray-500">$20</del>
               <p className="text-sm">${price}</p>
             </div>
           </div>
-          <IoMdAddCircleOutline className="text-xl cursor-pointer" />
         </CardFooter>
       </Card>
     </div>

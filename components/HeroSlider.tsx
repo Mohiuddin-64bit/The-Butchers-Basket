@@ -16,7 +16,7 @@ const HeroSlider = async() => {
         <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
           <div className="inline-block text-center justify-center">
             <h1 className={title()}>The Butcher&apos;s&nbsp;</h1>
-            <h1 className={title({ color: "violet" })}>Basket&nbsp;</h1>
+            <h1 className={title({ color: "primary" })}>Basket&nbsp;</h1>
             <br />
             <h2 className={subtitle({ class: "mt-4" })}>
               Where Quality Meets Freshness - Delivering Heritage Breeds

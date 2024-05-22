@@ -21,7 +21,7 @@ const AllMeats = async ({searchParams} : {searchParams: string}) => {
       <aside className="col-span-0 h-60 sm:col-span-5 md:col-span-4 lg:col-span-3 sm:grid hidden">
         <FilterProducts />
       </aside>
-      <div className="h-screen col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-9">
+      <div className="col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-9">
         <div className="flex flex-col">
           <h3 className="text-4xl font-bold">Our Collection of Meats</h3>
           <p className="mt-2 font-semibold">Showing 1–12 of 24 item(s)</p>
@@ -49,7 +49,7 @@ const AllMeats = async ({searchParams} : {searchParams: string}) => {
             value={60}
             className="max-w-lg mx-auto mb-7"
           />
-          {/* <Button className="px-20 rounded-3xl">Load More</Button> */}
+          <Button className="px-20 rounded-3xl">Load More</Button>
         </div>
       </div>
     </div>
